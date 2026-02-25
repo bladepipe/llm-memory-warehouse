@@ -1,33 +1,21 @@
-# 记忆卡片
-
-## 基本信息
-- **日期**: 2026-02-25
-- **对话ID**: conv-20260225-starrocks-tidb
-- **主题**: StarRocks与TiDB写入对比
-- **参与方**: 用户 + LLM助手
-
-## 对话摘要
-StarRocks 采用“活扣”哲学（现切现拌），TiDB 采用“死扣”哲学（记账先生），本质是实时性与一致性的权衡。
-
-## 关键内容
-### 核心讨论点
+---
+date: 2026-02-25
+conversation_id: conv-20260225-starrocks-tidb
+topic: StarRocks与TiDB写入对比
+summary: StarRocks 采用“活扣”哲学（现切现拌），TiDB 采用“死扣”哲学（记账先生），本质是实时性与一致性的权衡。
+key_points:
 - StarRocks：数据写入即可见，适合流式分析场景
 - TiDB：强一致性事务保障，写入需经两阶段提交
 - “活扣”强调灵活性，“死扣”强调确定性
-
-### 重要决策
-
-### 待办事项
+decisions: 无
+action_items:
 - 验证 StarRocks flat_json_v2 模式在高并发写入下的稳定性
 - 检查 TiDB 在混合负载下事务冲突率是否超阈值
 - 执行一次端到端写入延迟对比测试（10万行 JSON）
-
-### 知识点提取
+knowledge_points:
 - 活扣：刘震云提出的比喻，指动态绑定、即时生效的数据处理方式
 - 死扣：刘震云提出的比喻，指静态绑定、严格校验的数据处理方式
 - flat_json_v2：StarRocks 支持的嵌套 JSON 扁平化写入协议，支持 schema-on-read
-
-## 参考资料
-conversations/2026-02-25-StarRocks与TiDB写入对比.md
-
-## 备注
+references: conversations/2026-02-25-StarRocks与TiDB写入对比.md
+notes: 无
+---
